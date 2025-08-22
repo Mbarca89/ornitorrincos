@@ -9,7 +9,7 @@ package ornitorrinco;
  *
  * @author Mauricio
  */
-public class Ornitorrinco {
+public class Main {
 
     /**
      * @param args the command line arguments
