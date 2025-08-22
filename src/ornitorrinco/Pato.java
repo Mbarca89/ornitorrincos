@@ -1,14 +1,17 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ornitorrinco;
 
-/**
- *
- * @author Mauricio
- */
-public class Pato {
+
+public interface Pato {
+     
+   double picoTamaño= 6.8;
+   double patasTamaño= 7.8;
+   int Patas= 2;
+   String pico= "Pico Plano";
+    
+    
+    public void  tocarOrgano();
+    
+    
     
 }
