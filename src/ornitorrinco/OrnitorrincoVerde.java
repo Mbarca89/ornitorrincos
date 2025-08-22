@@ -8,6 +8,6 @@ package ornitorrinco;
  *
  * @author Nicolino Uchiha
  */
-public class Ornitorrinco {
+public class OrnitorrincoVerde {
     
 }

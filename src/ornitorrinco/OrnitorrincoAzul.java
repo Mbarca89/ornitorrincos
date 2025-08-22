@@ -9,14 +9,8 @@ package ornitorrinco;
  *
  * @author Mauricio
  */
-public class Main {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-
-        
-    }
+public class OrnitorrincoAzul extends Castos implements Pato {
+    
+    
     
 }
