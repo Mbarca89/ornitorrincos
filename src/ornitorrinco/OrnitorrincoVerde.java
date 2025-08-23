@@ -4,6 +4,7 @@
  */
 package ornitorrinco;
 import java.util.Scanner;
+
 /**
  *
  * @author Nicolino Uchiha

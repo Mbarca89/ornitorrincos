@@ -35,10 +35,6 @@ public class Main {
         System.out.println("Ingresa la velocidad de nado del padre (para el OrnitorrincoVerde):");
         
         double velVerde = scanner.nextDouble();
-        
-        
-        
-        
                 
 
     }

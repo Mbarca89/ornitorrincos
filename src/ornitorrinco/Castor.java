@@ -1,6 +1,6 @@
 
 package ornitorrinco;
-
+import java.util.Random;
 
 public class Castor {
     
@@ -32,7 +32,13 @@ public class Castor {
     public void nadar(){
         System.out.println("Estoy nadando a "+velocidadNadar +" km/hr" );
     }
-    public void tocaGuitarra(){
-        System.out.println("Estoy tocando la guitarra");
+    
+    public void tocarGuitarra() {
+        Random r = new Random();
+        System.out.println("El castor toca la guitarra:");
+        for (int i = 0; i < 3; i++) {
+            int cuerda = r.nextInt(6) + 1;
+            System.out.println("Tocando cuerda " + cuerda);
+        }
     }
 }

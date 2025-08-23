@@ -1,17 +1,13 @@
 
 package ornitorrinco;
 
-
 public interface Pato {
      
-   double picoTamaño= 6.8;
-   double patasTamaño= 7.8;
-   int Patas= 2;
-   String pico= "Pico Plano";
+   double PICOTAMANIOO = 6.8;
+   double PATASTANANIO = 7.8;
+   int PATAS = 2;
+   String PICO = "Pico Plano";
     
-    
-    public void  tocarOrgano();
-    
-    
-    
+   public void  tocarOrgano();
+     
 }
