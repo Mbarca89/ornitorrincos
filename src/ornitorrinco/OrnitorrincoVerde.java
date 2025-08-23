@@ -30,7 +30,7 @@ public class OrnitorrincoVerde extends Castor implements MamaPata {
         System.out.println(nombre + " toca el Guitorgan:");
         super.tocarGuitarra();
         this.tocarOrgano();
-        System.out.println("cuac cuac…!");
+        System.out.println("cuac cuaac…!");
     }
 
 }
