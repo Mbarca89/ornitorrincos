@@ -11,8 +11,8 @@ import java.util.Scanner;
  */
 public class OrnitorrincoVerde extends Castor implements MamaPata {
     private String nombre;
-    private double pico = 6.8;
-    private double patas = 7.5;
+    private double pico = PICOTAMANIO;
+    private double patas = PATASTANANIO;
 
     public OrnitorrincoVerde(String nombre, double longiCola, double velocidad) {
         super(longiCola, velocidad);
