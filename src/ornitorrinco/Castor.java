@@ -16,7 +16,7 @@ public class Castor {
         return velocidadNadar;
     }
 
-    public void setVelocidadNadar(int velocidadNadar) {
+    public void setVelocidadNadar(int velsocidadNadar) {
         this.velocidadNadar = velocidadNadar;
     }
 
