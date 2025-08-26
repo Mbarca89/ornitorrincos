@@ -36,7 +36,7 @@ public class Main {
             blue.nadar();
             blue.tocarGuitarra();
 
-            System.out.println("\nOrnitorrinco azul: " + blui.getNombre());
+            System.out.println("Ornitorrinco azul: " + blui.getNombre());
             blui.nadar();
             blui.tocarGuitarra();
 
