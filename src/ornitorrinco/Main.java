@@ -1,3 +1,4 @@
+package ornitorrinco;
 import java.util.*;
 
 public class Main {
@@ -5,51 +6,52 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         try {
-            // pido datos del castor
+          
             System.out.print("Cola del castor (cm): ");
             double cola = sc.nextDouble();
 
-            System.out.print("Velocidad base del castor (km/h, máx 8): ");
-            double vel = sc.nextDouble();
+            System.out.print("Velocidad base del castor (km/h, mÃ¡x 8): ");
+            int vel = sc.nextInt();
 
-            // creo los ornitorrincos
-            OrnitorrincoVerde verde = new OrnitorrincoVerde("Perry", cola, vel);
+           
+            OrnitorrincoVerde verde = new OrnitorrincoVerde("Perry", vel, cola);
 
-            System.out.print("Propulsión de Blue (5 a 10 km/s): ");
-            double propBlue = sc.nextDouble();
+            System.out.print("PropulsiÃ³n de Blue (5 a 10 km/h): ");
+            int propBlue = sc.nextInt();
 
-            System.out.print("Propulsión de Blui (5 a 10 km/s): ");
-            double propBlui = sc.nextDouble();
+            System.out.print("PropulsiÃ³n de Blui (5 a 10 km/h): ");
+            int propBlui = sc.nextInt();
 
-            OrnitorrincoAzul blue = new OrnitorrincoAzul("Blue", cola, vel, propBlue);
-            OrnitorrincoAzul blui = new OrnitorrincoAzul("Blui", cola, vel, propBlui);
+            OrnitorrincoAzul blue = new OrnitorrincoAzul("Blue", vel, cola, propBlue);
+            OrnitorrincoAzul blui = new OrnitorrincoAzul("Blui", vel, cola, propBlui);
 
-            // muestro habilidades
-            System.out.println("--- HABILIDADES ---");
-            System.out.println("Orni verde: " + verde.getNombre());
+            
+            System.out.println("\n--- HABILIDADES ---");
+            System.out.println("Ornitorrinco verde: " + verde.getNombre());
             verde.nadar();
             verde.tocarGuitarra();
-            verde.tocarGuitorgan(sc);
+            verde.tocarGuitorgan();
 
-            System.out.println("Orni azul: " + blue.getNombre());
+            System.out.println("\nOrnitorrinco azul: " + blue.getNombre());
             blue.nadar();
             blue.tocarGuitarra();
 
-            System.out.println("Orni azul: " + blui.getNombre());
+            System.out.println("\nOrnitorrinco azul: " + blui.getNombre());
             blui.nadar();
             blui.tocarGuitarra();
 
-            // arreglo de 3
+           
             Castor[] hermanos = new Castor[3];
             try {
                 hermanos[0] = blue;
                 hermanos[1] = verde;
                 hermanos[2] = blui;
+               
             } catch (ArrayIndexOutOfBoundsException e) {
-                System.out.println("Error al guardar en el arreglo.");
+                System.out.println(" Error al guardar en el arreglo.");
             }
 
-            // mejores nadadores (solo azules)
+          
             List<OrnitorrincoAzul> lista = new ArrayList<>();
             for (Castor c : hermanos) {
                 if (c instanceof OrnitorrincoAzul) {
@@ -58,26 +60,25 @@ public class Main {
             }
 
             if (!lista.isEmpty()) {
-                // ordeno descendente para elegir 2
-                lista.sort((a, b) -> Double.compare(b.getPropulsionKms(), a.getPropulsionKms()));
+                
+                lista.sort((a, b) -> Integer.compare(b.getPropulsion(), a.getPropulsion()));
                 List<OrnitorrincoAzul> top2 = lista.subList(0, Math.min(2, lista.size()));
 
-                // los paso ascendente y los recorro con iterador
-                top2.sort(Comparator.comparingDouble(OrnitorrincoAzul::getPropulsionKms));
-                System.out.println("Top nadadores (orden ascendente por propulsión):");
+            
+                top2.sort(Comparator.comparingInt(OrnitorrincoAzul::getPropulsion));
+                System.out.println("\nTop nadadores (orden ascendente por propulsiÃ³n):");
                 Iterator<OrnitorrincoAzul> it = top2.iterator();
                 while (it.hasNext()) {
                     OrnitorrincoAzul o = it.next();
-                    System.out.println(o.getNombre() + " -> " + o.getPropulsionKms() + " km/s");
+                    System.out.println(o.getNombre() + " -> " + o.getPropulsion() + " km/h");
                 }
             } else {
                 System.out.println("No hay azules para mostrar.");
             }
 
         } finally {
-            System.out.println("Los ornitohermanos juntos al fin...");
+            System.out.println("\nLos ornitohermanos juntos al fin...");
+            sc.close();
         }
     }
 }
-
-   
