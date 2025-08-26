@@ -73,7 +73,7 @@ public class Main {
                     System.out.println(o.getNombre() + " -> " + o.getPropulsion() + " km/h");
                 }
             } else {
-                System.out.println("No hay azules para mostrar");
+                System.out.println("No hay azules para mostrar.");
             }
 
         } finally {
